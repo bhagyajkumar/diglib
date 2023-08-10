@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block content %}
+<div data-bs-theme="dark">  
+    {% include "components/navbar.html" %}
+    <div class="container-fluid">
+        {% for tag in tags %}
+        <div class="card">
+            <div class="card-body">{{ tag.name }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
